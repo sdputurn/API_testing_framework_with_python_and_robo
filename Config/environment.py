@@ -11,7 +11,7 @@ class Environment:
         if env_name == 'DEV':
             self.env_name = env_name
             self.jump_server_name = 'dev.example.com'
-            self.jump_server_ip = '192.168.56.4'
+            self.jump_server_ip = '192.168.33.10'
             self.jump_user = 'vagrant'
             self.jump_ssh_key_file = os.getenv('HOME')+os.sep+'id_rsa'
             self.password_auth = False # True of False. True  is use password based ssh login
