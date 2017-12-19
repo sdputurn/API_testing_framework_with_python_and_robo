@@ -1,4 +1,4 @@
 language: python
 install:
   - pip install -r Config/requirements.txt
-script: /bin/false
+script: /bin/true
