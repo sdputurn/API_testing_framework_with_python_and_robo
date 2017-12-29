@@ -1,0 +1,7 @@
+# files menioned will be ignored by docker
+*/.gitignore
+Readme
+Dockerfile
+*/*.pyc
+.git
+

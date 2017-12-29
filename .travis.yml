@@ -3,8 +3,8 @@ service:
   - docker
 language: python
 before_install:
-  - docker build -t sdputurn/api_automation_testing:v1-$TRAVIS_BUILD .
+  - docker build -t sdputurn/api_automation_testing:v1-$TRAVIS_BUILD_NUMBER .
 after_install:
   - docker login -i $DOCKER_USER -p DOCKER_PASSWORD
-  - docker push sdputurn/api_automation_testing:v1-$TRAVIS_BUILD
+  - docker push sdputurn/api_automation_testing:v1-$TRAVIS_BUILD_NUMBER
 script: /bin/true
