@@ -1,4 +1,10 @@
+sudo: required
+service:
+  - docker
 language: python
-install:
-  - pip install -r Config/requirements.txt
+before_install:
+  - docker build -t sdputurn/api_automation_testing:v1-$TRAVIS_BUILD
+after_install:
+  - docker login -i $DOCKER_USER -p DOCKER_PASSWORD
+  - docker push sdputurn/api_automation_testing:v1-$TRAVIS_BUILD
 script: /bin/true
